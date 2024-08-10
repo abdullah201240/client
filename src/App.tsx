@@ -1,8 +1,15 @@
-import Landing from "./components/Landing";
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavigationStack from './components/NavigationStack';
+
 function App() {
   return (
     <div>
-<Landing/>
+
+<Router>
+      <NavigationStack />
+     
+
+    </Router>
     </div>
   );
 }
