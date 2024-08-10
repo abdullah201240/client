@@ -1,0 +1,159 @@
+.footer {
+    background-color: #424242;
+    padding: 20px 5%;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.footer .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly; /* Distributes space evenly between the columns */
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 300px; /* Ensures each column has a max width */
+    margin: 10px 0;   /* Adds some margin for top and bottom */
+    text-align: left; /* Aligns the content to the left */
+    padding: 0 10px;  /* Added horizontal padding for better spacing */
+    box-sizing: border-box; /* Ensures padding doesn't exceed the width */
+}
+
+.footer-column img.footer-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; /* Adjusted for better readability on mobile */
+}
+
+.footer-links a:hover {
+    color: #f1f1f1;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px; /* Adjusted for better readability on mobile */
+}
+
+.contact-details {
+    margin: 20px 0;
+    font-size: 14px; /* Adjusted for better readability on mobile */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Adjusted for better spacing */
+}
+
+.social-icon {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 16px; /* Adjusted icon size */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgb(248, 149, 31);
+    padding-top: 20px;
+    font-size: 14px; /* Adjusted for better readability on mobile */
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: orange !important;
+}
+
+/* Add top padding specifically to the Contact Information and Our Office Address columns */
+.footer-column:nth-child(2), /* Contact Information column */
+.footer-column:nth-child(3) { /* Our Office Address column */
+    padding-top: 2.5%; /* Adjust the padding value as needed */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-column {
+        max-width: 90%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .footer-column img.footer-logo {
+        max-width: 80px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 2.5%;
+    }
+    
+    .footer-heading {
+        font-size: 14px;
+    }
+    
+    .contact-details,
+    .footer-links a,
+    .footer-bottom,
+    .social-icon {
+        font-size: 12px;
+    }
+    
+    .footer-column img.footer-logo {
+        max-width: 60px;
+    }
+    
+    .social-icon {
+        padding: 8px;
+    }
+    
+    .footer-bottom {
+        padding-top: 15px;
+    }
+}
