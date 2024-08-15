@@ -1,0 +1,84 @@
+.user-login-background {
+    background-color: #F1F1F1;
+    padding: 20px 0;
+}
+
+.user-login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interior-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-form-container {
+    padding: 20px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    color: #F8951F;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 5px;
+    color: #F8951F;
+    font-size: 14px;
+    text-align: right;
+}
+
+.login-button {
+    background-color: #F8951F;
+    color: white;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.google-button {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-text {
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+.or-text {
+    text-align: center;
+    margin: 15px 0;
+    color: #888;
+}
+.password-container {
+    position: relative;
+}
+
+.toggle-password-visibility {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+}

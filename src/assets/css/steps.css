@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.text-left {
+    text-align: left !important;
+    padding-left: 8%;
+
+}
 
 /* FAQ Section */
 .faq {
@@ -42,6 +47,7 @@ ul {
 .btn-warning {
     background-color: #F8951F;
     border-color: #F8951F;
+    margin-left: 3%;
 }
 
 .btn-warning:hover {

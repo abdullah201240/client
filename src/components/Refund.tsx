@@ -16,6 +16,8 @@ export default function Refund() {
         navLinks={NavLinks}
         showCartIcon={true}
       />
+      <br/>
+      
        <Categories />
        <br></br>
       <div className="container container2 py-4" style={{ backgroundColor: 'rgb(242, 238, 232)' }}>

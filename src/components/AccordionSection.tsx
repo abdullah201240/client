@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 type AccordionItem = {
   title: string;
@@ -21,9 +19,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items }) => {
           <span className="accordion-title">
               {item.title}
             </span>
-            <span className="accordion-icon">
-              <FontAwesomeIcon icon={faCaretDown} />
-            </span>
+            
             
           </Accordion.Header>
           <Accordion.Body>{item.content}</Accordion.Body>

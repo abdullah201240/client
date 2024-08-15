@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function Catagories() {
   return (
     <div>
-        <div className="dropdown" style={{paddingLeft:'13.5%',paddingBottom:'1%'}}>
+        <div className="dropdown" style={{paddingLeft:'8%',paddingBottom:'1%'}}>
                     
                     <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    <b> All Categories <FontAwesomeIcon icon={faCaretDown} /></b>

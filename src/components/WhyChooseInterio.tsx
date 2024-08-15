@@ -11,23 +11,29 @@ const WhyChooseInterio: React.FC = () => {
   ];
 
   return (
-    <div className="my-5 container1">
-<h2 className="text-center why-choose-heading">Why Choose Interio?</h2>
+    <div className="my-5 container1 ">
+<h2>Why Choose Interio?</h2>
+
       <div className="row justify-content-center">
-        <div className="col-lg-10">
+        <div className="col-lg-11">
           <div className="row">
             <div className="col-md-6">
+            <br></br>
               <AccordionSection items={accordionItems.slice(0, 2)} />
             </div>
             <div className="col-md-6">
+            <br></br>
               <AccordionSection items={accordionItems.slice(2)} />
             </div>
           </div>
         </div>
       </div>
       <div className="my-5 container1 commitment-section">
-        <h2 className="text-center commitment-heading">Our Commitment</h2>
+        <h2 >Our Commitment</h2>
+        <br></br>
+        <br></br>
         <div className="card p-5 card1">
+        
           <p className="text-center mb-0">
             At Interio, we are committed to sustainability and ethical sourcing. We strive to work with suppliers who share our values and adhere to fair trade practices. Our goal is to offer products that are not only beautiful and functional but also environmentally responsible.
           </p>

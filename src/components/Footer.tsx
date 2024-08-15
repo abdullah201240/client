@@ -6,6 +6,9 @@ import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneVolume, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import AmerLogo from '../assets/img/AmarPay.png'
 export default function Footer() {
+  const today = new Date();
+  const year = today.getFullYear();
+
   return (
     <footer className="footer">
       <div className="container">
@@ -47,7 +50,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>All Rights Reserved by <a href="https://digirib.com/" className="text-white">Digirib</a> | 2024</p>
+          <p>All Rights Reserved by <a href="https://digirib.com/" className="text-white">Digirib</a> | {year}</p>
         </div>
       </div>
     </footer>

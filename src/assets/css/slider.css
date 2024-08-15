@@ -7,59 +7,61 @@
 
 /* Ensure the carousel container is centered */
 .carousel-container {
-  width: 73%; /* Full width of the viewport */
-  margin: 0 auto; /* Center horizontally */
-  position: relative; /* Relative positioning for the container */
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* Set the height of the carousel container relative to the viewport */
 .carousel-inner {
-  height: 60vh; /* Adjust height for larger screens */
+  height: 70vh;
 }
 
 /* Style the carousel items */
 .carousel-inner .carousel-item img {
-  width: 100%; /* Full width of the carousel container */
-  height: 100%; /* Full height of the carousel container */
-  object-fit: cover; /* Cover the container without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Style the carousel caption for better visibility */
+/* Style the carousel caption for better visibility and centering */
 .carousel-caption {
   position: absolute;
-  bottom: 20%; /* Adjust position from the bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  text-align: center; /* Center text */
-  padding: 0 20px; /* Add padding for better readability */
-  color: #fff; /* Ensure text color contrasts with background */
-  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for contrast */
-  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  top: 50%; /* Position at 50% from the top */
+  right: 90%;
+  transform: translate(5%, 5%); /* Center both horizontally and vertically */
+  text-align: center;
+  padding: 0 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 100%; /* Ensures the caption container spans the width */
+  max-width: 800px; /* Optional: limit the width of the text container */
 }
 
 /* Ensure the button container is styled appropriately */
 .carousel-button-container {
-  margin-top: 15px; /* Space above the button */
+  margin-top: 15px;
 }
 
 /* Button styling */
 .btn-primary {
-  background-color: orange; /* Button background color */
-  border: none; /* Remove border */
+  background-color: orange;
+  border: none;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .carousel-inner {
-    height: 20vh; /* Adjust height for smaller screens */
+      height: 20vh;
   }
 
   .carousel-caption {
-    bottom: 10%; /* Adjust bottom positioning for smaller screens */
-    padding: 0 10px; /* Reduce padding on smaller screens */
+      top: 60%; /* Adjust top positioning for smaller screens */
+      padding: 0 10px;
   }
   
   .btn-primary {
-    padding: 8px 16px; /* Adjust button padding */
+      padding: 8px 16px;
   }
 }

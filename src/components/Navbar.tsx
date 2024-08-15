@@ -5,11 +5,12 @@ import { faPhoneVolume, faEnvelope, faCartShopping, faSearch } from '@fortawesom
 import '../assets/css/navbar.css';
 
 interface NavLink {
-  label: string;
+  label?: string;
   to?: string;
   href?: string;
   isDropdown?: boolean;
-  dropdownItems?: { label: string; to: string; icon: React.ReactNode; }[];
+  dropdownItems?: { label: string; to: string; icon: React.ReactNode }[];
+  icon?: React.ReactNode;
 }
 
 interface NavbarProps {
@@ -33,14 +34,16 @@ const Navbar: React.FC<NavbarProps> = ({
     <div>
       <div className="contact-bar">
         <FontAwesomeIcon icon={faPhoneVolume} className="fa-icon" />
-        <h1 style={{ color: 'white' }}>{phone}</h1>
+        <h1 className="contact-info">{phone}</h1>
         <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
-        <h1 style={{ color: 'white' }}>{email}</h1>
+        <h1 className="contact-info">{email}</h1>
       </div>
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link to='/'> <img src={logo} alt="Logo" className="navbar-logo" /> </Link>
-      
+        <Link to='/'>
+          <img src={logo} alt="Logo" className="navbar-logo" />
+        </Link>
+
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +61,8 @@ const Navbar: React.FC<NavbarProps> = ({
                 {link.isDropdown ? (
                   <>
                     <a className="nav-link dropdown-toggle" href="#" id={`navbarDropdown${index}`} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {link.label}
+                      {link.icon && <span className="nav-icon">{link.icon}</span>}
+                      {link.label && <span style={{ marginLeft: link.icon ? '10px' : '0' }}>{link.label}</span>}
                     </a>
                     <div className="dropdown-menu" aria-labelledby={`navbarDropdown${index}`}>
                       {link.dropdownItems?.map((item, i) => (
@@ -71,16 +75,26 @@ const Navbar: React.FC<NavbarProps> = ({
                   </>
                 ) : (
                   link.to ? (
-                    <Link className="nav-link" to={link.to}>{link.label}</Link>
+                    <Link className="nav-link" to={link.to}>
+                      {link.icon && <span className="nav-icon">{link.icon}</span>}
+                      {link.label && <span style={{ marginLeft: link.icon ? '10px' : '0' }}>{link.label}</span>}
+                    </Link>
                   ) : (
-                    <a className="nav-link" href={link.href}>{link.label}</a>
+                    link.href && (
+                      <a className="nav-link" href={link.href}>
+                        {link.icon && <span className="nav-icon">{link.icon}</span>}
+                        {link.label && <span style={{ marginLeft: link.icon ? '10px' : '0' }}>{link.label}</span>}
+                      </a>
+                    )
                   )
                 )}
               </li>
             ))}
             {showCartIcon && (
               <li className="nav-item">
-                <Link className="nav-link" to="#"><FontAwesomeIcon icon={faCartShopping} /></Link>
+                <Link className="nav-link" to="/cart">
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </Link>
               </li>
             )}
           </ul>

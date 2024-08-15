@@ -10,6 +10,7 @@ import P7 from '../assets/img/P7.png';
 import P8 from '../assets/img/P8.png';
 import '../assets/css/bestSellingProducts.css';
 
+
 const allProducts = [
   { id: 1, img: P1, name: 'Product 1', price: '10,000 BDT' },
   { id: 2, img: P2, name: 'Product 2', price: '10,000 BDT' },
@@ -34,10 +35,10 @@ export default function BestSellingProducts() {
       <div className="row">
         {allProducts.slice(0, visibleProducts).map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
-            <div className="card h-100">
-              <img className="card-img-top" src={product.img} alt={product.name} />
-              <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
+            <div className="card1 h-100">
+              <img className="card1-img-top" src={product.img} alt={product.name} />
+              <div className="card1-body">
+                <h5 className="card1-title">{product.name}</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <p style={{ color: 'orange' }}>{product.price}</p>
                 <button className="see-all-btn">Buy Now</button>
@@ -48,7 +49,7 @@ export default function BestSellingProducts() {
       </div>
       {visibleProducts < allProducts.length && (
         <div className="text-center">
-          <button onClick={loadMoreProducts} className="load-more-btn">
+          <button onClick={loadMoreProducts} className="load-more-btn1">
             Load More
           </button>
         </div>

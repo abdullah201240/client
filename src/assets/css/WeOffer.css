@@ -1,0 +1,12 @@
+.we-offer-container {
+    background-color: #F9F9F9;
+    background-image: url('../img/Group91.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Ensures the background covers the full width and height */
+    background-position: center center; 
+    padding: 60px 0;
+    color: #333;
+    width: 100vw; /* Ensures the container takes up the full viewport width */
+    height: auto; /* Adjust the height as needed */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}

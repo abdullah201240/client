@@ -1,4 +1,4 @@
-/* commitment.css */
+
 
 /* Styling for headings */
 h2 {
@@ -116,16 +116,7 @@ h2 {
     /* Prevents text from wrapping to the next line */
 }
 
-/* Accordion icon styling */
-.accordion-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(242, 238, 232);
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
